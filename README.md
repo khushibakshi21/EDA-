@@ -22,8 +22,37 @@ The global car dataset encompasses information on various aspects of the automot
 # Repository Contents:
 1. Jupyter Notebooks: EDA code written in Python using Jupyter Notebooks.
 2. Datasets: Raw and cleaned datasets used in the analysis.
-3. Visualizations: Plots, charts, and graphs generated during the EDA process.
-4. Documentation: Detailed explanations and insights derived from the analysis.
+4. Visualizations: Plots, charts, and graphs generated during the EDA process.
+5. Documentation: Detailed explanations and insights derived from the analysis.
 
 # Usage:
 Feel free to explore the Jupyter Notebooks and datasets provided in this repository to gain insights into the bike sharing industry and global car companies. Contributions and feedback are welcome!
+
+
+
+# CHURN PREDICTION 
+The provided code performs churn prediction analysis using a dataset, with a focus on understanding customer behavior and predicting factors influencing customer lifetime value. Here's a summary of the code:
+
+1. **Data Loading and Exploration:**
+   1. The code starts by importing necessary libraries and loading the dataset from a specified file path.
+   2. Initial exploratory data analysis includes displaying a sample of the data, generating descriptive statistics, and examining the distribution of       the 'Contract' variable.
+
+2. **Data Cleaning:**
+   1. The 'TotalCharges' column is initially set to None and later converted to float64 by multiplying 'tenure' and 'MonthlyCharges'.
+   2. The cleaned dataset is saved to a CSV file for further analysis.
+
+3. **Visualization and Analysis:**
+   1. Visualizations are created to explore patterns among customers who have churned.
+   2. The dataset is divided into two groups based on the 80th percentile of 'TotalCharges', and various characteristics like contract type, internet        service, and additional services are analyzed for both groups.
+
+4. **Multiple Linear Regression:**
+   1. Dummy variables are created for categorical features, and a multiple linear regression model is fitted to understand the relationship between          different factors and 'TotalCharges'.
+   2. Coefficients of the model are visualized to identify the impact of various variables on customer lifetime value.
+
+5. **Analysis of Internet Service Subsets:**
+   1. Dummy variables are generated for subsets of internet services, and another multiple linear regression is performed to analyze their impact on         'TotalCharges'.
+   2. Coefficients of this model are visualized to assess the contribution of each subset of internet services to customer lifetime value.
+
+The code provides a comprehensive approach to churn prediction, combining data exploration, cleaning, and visualization techniques. The insights gained from the analysis can be valuable for making informed decisions regarding customer retention strategies.
+
+
